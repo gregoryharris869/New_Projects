@@ -15,6 +15,7 @@
   --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
   --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
   --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+  --step-6: clamp(3.3592rem, 2.8691rem + 2.4507vw, 4.7684rem);
 
   /* spacing */
 
@@ -28,7 +29,7 @@
   --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
   --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
   /*  */
-  --tracking: -0.05ch;
+  --tracking: -0.02ch;
   --tracking-s: -0.1ch;
   --wrapper-max-width: 75rem;
   --border-radius: var(--size-step-1);
@@ -147,8 +148,8 @@ textarea:not([rows]) {
 h1,
 h2,
 h3 {
-  line-height: 1.1;
-  letter-spacing: var(--tracking-s);
+  line-height: 1.4;
+  letter-spacing: var(--tracking);
 }
 
 ul,
@@ -174,8 +175,8 @@ h4 {
 }
 
 p {
-  font-size: var(--step-1);
-  letter-spacing: var(--tracking-s);
+  font-size: var(--step-0);
+  letter-spacing: var(--tracking);
   font-family: var(--paragraph);
 }
 
@@ -197,16 +198,16 @@ input {
 }
 
 .wrapper {
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--wrapper-max-width, 85rem);
-  position: relative;
 }
 /* section utils */
 
 .section__container {
+  max-width: var(--wrapper-max-width);
+  margin: auto;
   padding: 5rem 1rem;
-  width: var(--wrapper-max-width);
 }
 
 .section__header {
@@ -309,6 +310,58 @@ nav {
   color: var(--white);
   white-space: nowrap;
 }
+
+/* header content */
+
+.header__container {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size, 375px), 1fr)
+  );
+
+  gap: 2rem;
+}
+
+.header__container h1 {
+  font-size: var(--step-6);
+  font-weight: 500;
+  letter-spacing: var(--tracking-s);
+  color: var(--white);
+}
+
+.header__content .section__description {
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.header__btns {
+  display: flex;
+
+  gap: 1rem;
+}
+
+.header__btns .btn {
+  padding: calc(0.75rem - 4px) calc(1.5rem - 4px);
+  border: 2px solid var(--white);
+}
+
+.header__btns .btn:nth-child(1) {
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+.header__btns .btn:nth-child(2) {
+  background-color: var(--text-dark);
+}
+
+.header__btns .btn:nth-child(2):hover {
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+/* media query */
 
 @media (width > 786px) {
   nav {

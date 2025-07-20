@@ -186,6 +186,6 @@ input {
 .wrapper {
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--wrapper-max-width, 85rem);
+  max-width: var(--wrapper-max-width, 65rem);
   position: relative;
 }
