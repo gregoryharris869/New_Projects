@@ -252,7 +252,7 @@ header {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 125vh;
+  min-height: 100vh;
 }
 
 /* nav */
@@ -529,6 +529,148 @@ nav {
   padding: 3px 6px;
   background-color: var(--primary-color);
   border-radius: 0.25rem;
+}
+
+/* trip */
+
+.trip__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: 2rem 1rem;
+}
+
+.trip__card {
+  max-width: 250px;
+  margin-inline: auto;
+}
+
+.trip__card img {
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+  aspect-ratio: 1/1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.trip__card h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.trip__card p {
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+/* discount */
+
+.discount {
+  position: relative;
+  isolation: isolate;
+}
+
+.discount::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: var(--extra-light);
+  z-index: -1;
+}
+
+.discount__container {
+  padding: 5rem 1rem;
+  display: grid;
+  gap: 2rem;
+  background-image: linear-gradient(
+      to right,
+      rgba(196, 156, 116, 0.9),
+      rgba(196, 156, 116, 0.9)
+    ),
+    url("assets/discount.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.discount__content .section__header {
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.discount__content .section__description {
+  color: var(--white);
+}
+
+.discount__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.discount__btns .btn {
+  padding: calc(0.75rem - 4px) calc(1.5rem - 4px);
+  border: 2px solid var(--white);
+}
+
+.discount__btns .btn:nth-child(1) {
+  background-color: transparent;
+}
+
+.discount__btns .btn:nth-child(1):hover {
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+.discount__btns .btn:nth-child(2) {
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+/* footer */
+
+footer {
+  background-color: var(--extra-light);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: 4rem 2rem;
+}
+
+.footer__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: 1rem;
+}
+
+.footer__links a {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__links a:hover {
+  color: var(--primary-color);
+}
+
+.footer__bar {
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--text-light);
+  text-align: center;
 }
 
 /* media query */
