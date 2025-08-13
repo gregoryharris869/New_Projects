@@ -1,9 +1,10 @@
 :root {
-  --text: hsl(180, 54%, 7%);
-  --background: hsl(0, 0%, 100%);
-  --primary: hsl(0, 0%, 0%);
-  --secondary: hsl(0, 0%, 37%);
-  --accent: hsl(0, 0%, 78%);
+  --primary-color: #ff8906;
+  --secondary-color: #e5306f;
+  --text-dark: #0e0d16;
+  --text-light: #767268;
+  --extra-light: #f7f8fd;
+  --white: #ffffff;
 
   /* Font Size */
   --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
@@ -203,10 +204,53 @@ input {
   margin-block-start: var(--size-step-1, 1em);
 }
 
+/* utils */
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: var(--step-0);
+  font-family: var(--paragraph);
+  white-space: nowrap;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
 .wrapper {
   max-width: var(--wrapper-max-width, 65rem);
   margin-inline: auto;
   margin-left: auto;
   margin-right: auto;
   position: relative;
+}
+
+/* Nav */
+
+nav {
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  z-index: 9;
+}
+
+.nav__header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
+
+.nav__logo {
+  font-size: var(--step-0);
+  font-weight: 800;
 }
