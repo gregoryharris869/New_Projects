@@ -234,6 +234,12 @@ input {
   position: relative;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: var(--space-m);
+}
+
 /* Nav */
 
 nav {
@@ -298,6 +304,56 @@ nav {
 
 .nav__btns {
   display: none;
+}
+
+/* header content  */
+
+.section__container {
+  /* margin: auto; */
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.section__description {
+  font-weight: 500;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.header__image img {
+  max-width: 550px;
+  margin-inline: auto;
+}
+
+.header__content h1 span {
+  color: var(--secondary-color);
+}
+
+.header__btns {
+  /* margin-top: 2rem; */
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xl);
+
+  &:has(a) {
+    color: var(--text-dark);
+  }
+}
+
+.header__btns a span {
+  margin-right: 0.5rem;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  border: 2px solid var(--text-dark);
+  border-radius: 100%;
 }
 
 /*  */
