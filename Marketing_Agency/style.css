@@ -240,6 +240,22 @@ input {
   gap: var(--space-m);
 }
 
+.section__container {
+  /* margin: auto; */
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.section__description {
+  font-weight: 500;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
 /* Nav */
 
 nav {
@@ -308,22 +324,6 @@ nav {
 
 /* header content  */
 
-.section__container {
-  /* margin: auto; */
-  padding: 5rem 1rem;
-}
-
-.section__header {
-  font-weight: 800;
-  color: var(--text-dark);
-}
-
-.section__description {
-  font-weight: 500;
-  color: var(--text-light);
-  line-height: 1.5;
-}
-
 .header__image img {
   max-width: 550px;
   margin-inline: auto;
@@ -356,7 +356,106 @@ nav {
   border-radius: 100%;
 }
 
-/*  */
+/* services */
+
+.service {
+  background-color: var(--extra-light);
+}
+
+.section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-m);
+}
+
+.service__card {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--white);
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.service__card:hover {
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service__card:nth-child(1):hover {
+  border-color: #00d5be;
+}
+
+.service__card:nth-child(2):hover {
+  border-color: #ff637e;
+}
+
+.service__card:nth-child(3):hover {
+  border-color: #c27aff;
+}
+
+.service__card:nth-child(4):hover {
+  border-color: #00bcff;
+}
+.service__card:nth-child(5):hover {
+  border-color: #ff9900;
+}
+.service__card:nth-child(6):hover {
+  border-color: #00d592;
+}
+
+.service__card div {
+  margin-bottom: 1rem;
+  max-width: max-content;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.service__card:nth-child(1) div {
+  color: #00d5be;
+  background-color: #f0fdfa;
+}
+
+.service__card:nth-child(2) div {
+  color: #ff637e;
+  background-color: #fff1f2;
+}
+
+.service__card:nth-child(3) div {
+  color: #c27aff;
+  background-color: #faf5ff;
+}
+
+.service__card:nth-child(4) div {
+  color: #00bcff;
+  background-color: #f0f9ff;
+}
+
+.service__card:nth-child(5) div {
+  color: #ff9900; /* A vibrant orange */
+  background-color: #fff7eb;
+}
+
+.service__card:nth-child(6) div {
+  color: #00d592; /* A different shade of green/teal */
+  background-color: #effcf9;
+}
+
+.service__card h4 {
+  margin-bottom: 0.5rem;
+
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.service__card .section__description {
+  text-align: left;
+}
+
+.service__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-m);
+}
 
 @media (min-width: 768px) {
   nav {
