@@ -210,6 +210,32 @@ input {
   position: relative;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: var(--space-m);
+}
+
+[class*="aspect-ratio-"] {
+  display: block;
+  position: relative;
+}
+
+[class*="aspect-ratio-"] > * {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.aspect-ratio-square {
+  padding-top: 100%;
+}
+
+/*  */
+
 .section__container {
   margin: auto;
   padding: 5rem 1rem;
@@ -242,7 +268,7 @@ input {
   top: 50%;
   left: 0;
   transform: translate(-60%, -50%);
-  font-size: var(--step-3);
+  font-size: var(--step-5);
   font-weight: 600;
   color: var(--white);
   opacity: 0.1;
@@ -251,7 +277,7 @@ input {
 
 .section__header {
   margin-bottom: 1rem;
-  font-size: var(--step-5);
+  font-size: var(--step-4);
   font-weight: 400;
   font-family: var(--main-font);
   color: var(--white);
@@ -439,6 +465,88 @@ nav {
 
 .nav__action__btn {
   display: none;
+}
+
+/* about */
+
+.about {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    var(--primary-color) 8rem
+  );
+  overflow: hidden;
+}
+
+.about__container {
+  overflow: hidden;
+}
+
+.about__image img {
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about__content p {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.about__content a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--secondary-color);
+}
+
+.about__content a span {
+  transition: 0.3s;
+}
+
+.about__content a:hover span {
+  transform: translateX(10px);
+}
+
+/* footer */
+
+.footer {
+  background-color: var(--primary-color);
+}
+
+.footer__col:first-child {
+  max-width: 300px;
+}
+
+.footer__logo {
+  margin-bottom: 1rem;
+}
+
+.footer__col p {
+  color: var(--text-light);
+}
+
+.footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: var(--step-0);
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.footer__links a {
+  color: var(--text-light);
+}
+
+.footer__links a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.footer__bar {
+  padding: 1rem;
+  font-size: var(--step-0);
+  color: var(--text-light);
+  text-align: center;
 }
 
 /* media query */
